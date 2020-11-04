@@ -1,0 +1,42 @@
+.btn {
+    height: 36px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #26a69a;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+    padding: 0 16px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    outline: none;
+}
+
+.btn.flat {
+    background-color: transparent;
+    box-shadow: none;
+    color: #333;
+}
+
+.btn i {
+    line-height: 36px;
+}
+
+.btn:hover {
+    background-color: #4db6ac;
+}
+
+.btn:active {
+    background-color: #009688;
+}
+
+.btn.flat:hover {
+    color: #555;
+    background-color: transparent;
+}
+
+.btn.flat:active {
+    color: #222;
+    background-color: transparent;
+}

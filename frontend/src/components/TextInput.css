@@ -1,0 +1,84 @@
+.text-input-outer {
+    display: inline-block;
+    outline: none;
+    padding-bottom: 4px;
+    width: 100%;
+}
+
+.text-input-wrapper {
+    padding-top: 24px;
+    height: 40px;
+    position: relative;
+    vertical-align: top;
+}
+
+.input-container {
+    display: flex;
+    position: relative;
+    top: 14px;
+}
+
+.input-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: transparent;
+    border: none;
+    display: block;
+    font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 0%;
+    outline: none;
+    padding: 0;
+    z-index: 0;
+    color: #202124;
+    width: 100%;
+}
+
+.input-label {
+    font-size: 16px;
+    color: #757575;
+    transform-origin: bottom left;
+    transition: all .3s cubic-bezier(0.4,0,0.2,1);
+    transition-property: color,bottom,transform;
+    font-size: 1rem;
+    font-weight: 500;
+    pointer-events: none;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+}
+
+.active .input-label {
+    transform: scale(.75) translateY(-39px);
+}
+
+.input-border {
+    background-color: rgba(0,0,0,0.12);
+    bottom: -2px;
+    height: 1px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.input-border.bad {
+    background-color: #F44336;
+}
+
+.message {
+    margin-top: 20px;
+    position: relative;
+    min-height: 18px;
+    display: none;
+    font-size: 12px;
+}
+
+.message.bad {
+    display: block;
+    color: #F44336;
+}
