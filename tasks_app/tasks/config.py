@@ -10,3 +10,5 @@ DATABASE_CREDENTIALS = config("DATABASE_CREDENTIALS", cast=Secret, default="dev:
 DATABASE_NAME = config("DATABASE_NAME", default="tasks")
 DATABASE_PORT = config("DATABASE_PORT", default="5432")
 SQLALCHEMY_DB_URI = f"postgresql+psycopg2://{DATABASE_CREDENTIALS}@{DATABASE_HOSTNAME}:{DATABASE_PORT}/{DATABASE_NAME}"
+
+ALLOWED_HOST = config("ALLOWED_HOST", default="localhost:3000")
