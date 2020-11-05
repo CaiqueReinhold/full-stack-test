@@ -4,7 +4,6 @@ import React from 'react';
 
 export default function Pagination(props) {
     const totalPages = parseInt(props.totalItems / props.itemsPerPage) + (props.totalItems % props.itemsPerPage > 0 ? 1 : 0);
-    console.log(props, totalPages);
 
     const handlePrevious = (event) => {
         if (props.page > 1) {

@@ -35,7 +35,6 @@ export function fetchTasks(userId) {
         const page = getState().users.page;
         dispatch(fetchTasksRequest());
         axios.get(`${config.TASKS_DOMAIN}/user/${userId}/tasks?page=${page}`).then((response) => {
-            console.log(response.data);
             dispatch(fetchTasksSuccess(response.data.items, response.data.total));
         }).catch((error) => {
             if (error.response) {
