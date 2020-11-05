@@ -1,0 +1,9 @@
+build:
+    docker:
+        web: Dockerfile
+run:
+    web: uvicorn main:app --port $PORT
+release:
+    image: web
+    command:
+        - alembic upgrade head
