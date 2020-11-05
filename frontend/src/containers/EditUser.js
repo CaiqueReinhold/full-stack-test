@@ -17,10 +17,12 @@ export default function EditUser() {
     const user = useSelector((state) => state.users.selectedUser);
 
     useEffect(() => {
-        if (!user) {
-            dispatch(getUser(userId));
-        } else {
-            setInternalState({ name: user.name });
+        if (userId) {
+            if (!user) {
+                dispatch(getUser(userId));
+            } else {
+                setInternalState({ name: user.name });
+            }
         }
     }, [user, userId, dispatch]);
 
@@ -30,7 +32,7 @@ export default function EditUser() {
             return;
         }
 
-        if (user) {
+        if (userId) {
             dispatch(updateUser(user, internalState.name));
         } else {
             dispatch(createUser(internalState.name));
@@ -39,6 +41,11 @@ export default function EditUser() {
 
     const saving = useSelector((state) => state.users.saving);
     const errorMsg = useSelector((state) => state.users.errorMsg);
+
+    if (userId && !user) {
+        return <div className='text-message'>User not found!</div>;
+    }
+
     return (
         <div>
             <h1>{user ? 'Update user' : 'Create User'}</h1>

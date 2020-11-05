@@ -1,6 +1,6 @@
 const ROUTES = {
     users: '/',
-    userCreate: '/user/create',
+    userCreate: '/users/create',
     userEdit: '/user/:userId/edit',
     tasks: '/user/:userId',
     taskCreate: '/user/:userId/task',
